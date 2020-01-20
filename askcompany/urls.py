@@ -1,15 +1,8 @@
 from django.contrib import admin
-from django.http import HttpResponse
-from django.urls import path
-
-
-# 원래는 Model
-def mysum(request, x, y):
-    result = x + y
-    return HttpResponse(f"result = {result}")
-
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("mysum/<int:x>/<int:y>", mysum)
+    path("shop/", include("shop.urls")),
+    path("blog/", include("blog.urls")),
 ]

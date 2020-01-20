@@ -1,0 +1,14 @@
+{% extends "shop/layout.html" %}
+{% load humanize %}
+
+{% block layout %}
+    <h2>{{ item.name }}</h2>
+    가격: {{ item.price|intcomma }}
+
+    {% if item.content %}
+        <p>{{ item.content }}</p>
+    {% endif %}
+
+    <hr />
+    <a href="/shop/">목록</a>
+{% endblock %}
