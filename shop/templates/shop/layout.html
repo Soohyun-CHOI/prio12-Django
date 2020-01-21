@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog for Ask Company</title>
-    <style>
-        body {
-            background: lightsteelblue;
-        }
-        h1  {
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <h1>Ask Company</h1>
+{% extends "layout.html" %}
+{% load static %}
 
-    {% block layout %}
-        기본내용
-    {% endblock %}
-</body>
-</html>
+{% block title %}Shop by Ask Company{% endblock %}
+
+{% block extra_head %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'shop/shop.css' %}">
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "blog/layout.html" %}
+
+{% block content %}
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+    <p>{{ post.created_at }}</p>
+    <hr />
+    <form action="/blog/">
+        {% csrf_token %}
+        <input type="submit" value="목록">
+    </form>
+{% endblock %}

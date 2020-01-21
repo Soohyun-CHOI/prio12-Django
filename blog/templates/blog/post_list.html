@@ -1,0 +1,13 @@
+{% extends "blog/layout.html" %}
+
+{% block content %}
+    <ul>
+        {% for p in post %}
+            <li><a href="{{ p.pk }}/">{{ p.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <form action="create/">
+        <input type="submit" value="작성하기">
+    </form>
+{% endblock %}

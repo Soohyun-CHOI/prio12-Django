@@ -1,8 +1,13 @@
 {% extends "shop/layout.html" %}
 {% load humanize %}
 
-{% block layout %}
+{% block content %}
     <h2>{{ item.name }}</h2>
+
+    {% if item.photo %}
+        <img src="{{ item.photo.url }}><br />
+    {% endif %}
+
     가격: {{ item.price|intcomma }}
 
     {% if item.content %}

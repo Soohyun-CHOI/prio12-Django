@@ -1,0 +1,12 @@
+{% extends "blog/layout.html" %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>제목: <input type="text" name="title"></p>
+        <p>내용: <textarea type="text" name="content"></textarea></p>
+        <p></p>
+        <input type="submit">
+    </form>
+{% endblock %}
+
